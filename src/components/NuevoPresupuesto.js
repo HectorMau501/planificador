@@ -9,7 +9,6 @@ const NuevoPresupuesto = ({
 
 }) => { //Se para por parametro handleNuevoPresupuesto ya que va hacer 
 
-
   return (
     <View style={styles.contenedor}>
       <Text style={styles.label}>Definir Presupuesto</Text>

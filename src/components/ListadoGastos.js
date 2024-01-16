@@ -23,7 +23,7 @@ const ListadoGastos = ({gastos, setModal, setGasto, filtro, gastosFiltrados}) =>
             /> //Esto itera en el arreglo de gastos para ver si hay gastos sino hay, pues te imprime que no hay 
         )) }
 
-        { gastos.length === 0 || ( gastosFiltrados.length === 0 && !!filtro ) && ( //El segundo codigo de gastosFiltrados lo que hace es debe de estar vacio, pero tiene que tener un filtro aplicado
+        {(gastos.length === 0 || ( gastosFiltrados.length === 0 && !!filtro ) ) && ( //El segundo codigo de gastosFiltrados lo que hace es debe de estar vacio, pero tiene que tener un filtro aplicado
             <Text style={styles.noGastos}>No hay Gastos</Text>
         )}
 
@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
         color: '#64748B',
         fontSize: 30,
         textAlign: 'center',
-        fontWeight: '700'
+        fontWeight: '700',
+        marginTop: 20
     },
     noGastos:{
         marginVertical: 20,
